@@ -78,14 +78,12 @@ debugger;
 
 const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
 const arr = input.split(' ');
-
 const result = arr.reduce(function(accumulator, currentValue){
   if (currentValue.length === 3){
-    accumulator += ' ';
+    return accumulator += ' ';
   }
   else{
-    accumulator += currentValue[currentValue.length -1 ].toUpperCase();
+    return accumulator += currentValue[currentValue.length -1].toUpperCase();
   }
-}, ' ');
-
+},'');
 console.log(result); 
