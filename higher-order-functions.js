@@ -58,19 +58,34 @@
 // rocksWarning('Centinela Ave and Olympic Blvd');
 // hiChris('Hey, how are you?');
 // byeChris('Goodnight');
+
 debugger; 
-const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+// const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
-const result = turtleMovements.filter(function(arr) {
-  if (arr[0] >= 0 && arr[1] >= 0){
-    return arr; 
+// const result = turtleMovements.filter(function(arr) {
+//   if (arr[0] >= 0 && arr[1] >= 0){
+//     return arr; 
+//   }
+// });
+
+// const totalCaseSteps = result.map(function(arr){
+//   return arr[0] + arr[1]; 
+// });
+
+// totalCaseSteps.forEach(function(val){
+//   console.log(val); 
+// });
+
+const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+const arr = input.split(' ');
+
+const result = arr.reduce(function(accumulator, currentValue){
+  if (currentValue.length === 3){
+    accumulator += ' ';
   }
-});
+  else{
+    accumulator += currentValue[currentValue.length -1 ].toUpperCase();
+  }
+}, ' ');
 
-const totalCaseSteps = result.map(function(arr){
-  return arr[0] + arr[1]; 
-});
-
-totalCaseSteps.forEach(function(val){
-  console.log(val); 
-});
+console.log(result); 
