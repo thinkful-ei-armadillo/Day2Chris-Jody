@@ -32,3 +32,4 @@ function average (numbers){
 }
 
 average ([4, 8]);
+
