@@ -22,7 +22,7 @@
 //   }
 //   return nowMin;
 // }
-debugger; 
+
 function average (numbers){
   let total = 0;
   numbers.forEach(function(number){
