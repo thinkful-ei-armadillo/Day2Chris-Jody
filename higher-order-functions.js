@@ -42,19 +42,35 @@
 // // <---- DO NOT EDIT BETWEEN THESE LINES
 
  
-function hazardWarningCreator(typeOfWarning) {
-  let warningCounter = 0;
-  return function(location) {
-    warningCounter ++;
-    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
-    console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
-  };
-}
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const hiChris = hazardWarningCreator('Chris is on the road');
-const byeChris = hazardWarningCreator('Chris is sleeping');
+// function hazardWarningCreator(typeOfWarning) {
+//   let warningCounter = 0;
+//   return function(location) {
+//     warningCounter ++;
+//     console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}`);
+//     console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+//   };
+// }
+// const rocksWarning = hazardWarningCreator('Rocks on the Road');
+// const hiChris = hazardWarningCreator('Chris is on the road');
+// const byeChris = hazardWarningCreator('Chris is sleeping');
 
-rocksWarning('Main St and Pacific Ave');
-rocksWarning('Centinela Ave and Olympic Blvd');
-hiChris('Hey, how are you?');
-byeChris('Goodnight');
+// rocksWarning('Main St and Pacific Ave');
+// rocksWarning('Centinela Ave and Olympic Blvd');
+// hiChris('Hey, how are you?');
+// byeChris('Goodnight');
+debugger; 
+const turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+const result = turtleMovements.filter(function(arr) {
+  if (arr[0] >= 0 && arr[1] >= 0){
+    return arr; 
+  }
+});
+
+const totalCaseSteps = result.map(function(arr){
+  return arr[0] + arr[1]; 
+});
+
+totalCaseSteps.forEach(function(val){
+  console.log(val); 
+});
